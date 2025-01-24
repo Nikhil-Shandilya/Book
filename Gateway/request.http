@@ -1,0 +1,174 @@
+#"uid": "65bb1fa37795999ccc1380d7",
+# "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkYWFkYWQiLCJfaWQiOiI2NWJiMWZhMzc3OTU5OTljY2MxMzgwZDciLCJpYXQiOjE3MDY3NjU2ODAsImV4cCI6MTcwNjc2NzQ4MH0.7MzKvUYNZvXhOYvk7Mqxpr4mW73s6QY7aoaR_r-hY-o",
+#   "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkYWFkYWQiLCJfaWQiOiI2NWJiMWZhMzc3OTU5OTljY2MxMzgwZDciLCJpYXQiOjE3MDY3NjIxNDcsImV4cCI6MTcwNjg0ODU0N30.hQj109xxiSaN0u4arO1nABKG4C__MfFRQDQWqIszAsA"
+
+POST http://localhost:4000/user 
+Content-Type: application/json
+
+{
+    "name": "hahah"
+}
+
+###
+GET http://localhost:4000/user/trial HTTP/1.1
+
+###
+Post http://localhost:4001/signup
+Content-Type: application/json
+
+{
+    "email": "adaadad",
+    "password":"asd"
+}
+
+###
+
+POST https://zipperapi.24-7.ro/user/signup
+Content-Type: application/json
+
+{
+    "email": "adad",
+    "password":"asd"
+}
+###
+POST http://localhost:4000/user/renewtoken HTTP/1.1
+Content-Type: application/json
+
+{
+    "uid":"65bb1fa37795999ccc1380d7",
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkYWFkYWQiLCJfaWQiOiI2NWJiMWZhMzc3OTU5OTljY2MxMzgwZDciLCJpYXQiOjE3MDY3NjIxNDcsImV4cCI6MTcwNjg0ODU0N30.hQj109xxiSaN0u4arO1nABKG4C__MfFRQDQWqIszAsA"
+}
+
+###
+Post http://localhost:4000/user/signin
+Content-Type: application/json
+
+{
+    "username": "MoThilak",
+    "password":"12346789"
+
+
+}
+
+###
+POST http://localhost:4000/user/transaction/create HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkYWFkYWQiLCJfaWQiOiI2NWJiMWZhMzc3OTU5OTljY2MxMzgwZDciLCJpYXQiOjE3MDY3NjU2ODAsImV4cCI6MTcwNjc2NzQ4MH0.7MzKvUYNZvXhOYvk7Mqxpr4mW73s6QY7aoaR_r-hY-o
+
+{
+    "amount": 500,
+    "initiator": "65bb1fa37795999ccc1380d7",
+    "recipient":"65bb1fa37795999ccc1380d7" 
+}
+
+#####################################################################  LIBRARY  #####################################################################
+
+
+
+GET http://localhost:4000/book/book/menupage/77.608116/13.036693
+
+###
+
+GET https://zipperapi.24-7.ro/book/book/menupage/77.608116/13.036693
+
+
+###
+GET http://localhost:4000/book/book/search/haha/77.608116/13.036693
+
+###
+GET http://localhost:4000/book/book/trial HTTP/1.1
+    
+###
+
+POST http://localhost:4000/book/book/request-borrow
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkYWFkYWQiLCJfaWQiOiI2NWJiMWZhMzc3OTU5OTljY2MxMzgwZDciLCJpYXQiOjE3MDY3NjU2ODAsImV4cCI6MTcwNjc2NzQ4MH0.7MzKvUYNZvXhOYvk7Mqxpr4mW73s6QY7aoaR_r-hY-o
+
+{
+    "timestamp": 1699948872,
+    "book_id": "65afaec3e97cda09b4650743"
+}
+
+###
+GET http://localhost:4000/book/book/all
+###
+GET https://zipperapi.24-7.ro/book/all
+
+###
+POST http://localhost:4000/book/book/add/65a36563aaa749d6cf771c1c HTTP/1.1
+Content-Type: application/json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkc2RhYWFhYWRhZCIsIl9pZCI6IjY1YTM2NGUwMzNmYmZjMjk3OWRlNWZjYSIsImlhdCI6MTcwNTIwNzAwOSwiZXhwIjoxNzA1MjA4ODA5fQ.t_oZ1FDujWk28wc6osxcUj3idcUUdhsMW37lTK0lM-w
+
+{
+    "name": "Blooming Dale",
+    "author": "Rachel Green",
+    "mrp": 225,
+    "priceOfBorrowing": 12,
+    "location": {
+        "type": "Point",
+        "coordinates": ["13.036693","77.608116"]
+    }
+}
+
+###
+GET http://localhost:4000/library/library/all
+
+###
+POST http://localhost:4000/library/library/create HTTP/1.1
+Content-Type: application/json 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFkc2RhYWFhYWRhZCIsIl9pZCI6IjY1YTM2NGUwMzNmYmZjMjk3OWRlNWZjYSIsImlhdCI6MTcwNTIwNzAwOSwiZXhwIjoxNzA1MjA4ODA5fQ.t_oZ1FDujWk28wc6osxcUj3idcUUdhsMW37lTK0lM-w
+
+{
+    "location": {
+        "type": "Point",
+        "coordinates": ["13.036693","77.608116"]
+    },
+    "name": "Budding Trees"
+}
+
+###
+GET http://localhost:4000/library/library/find/13.036693/77.608116
+
+
+###
+GET http://localhost:4000/library/library/find/655318c0e90b5bcc77ba2bbe HTTP/1.1
+
+### {
+#     "_id": "64db5c27cf1cef5441b6af2a",
+#     "name": "Budding Trees",
+#     "owner": "64db3bb41480042c7a5d19bc",
+#     "books": [],
+#     "location": {
+#     "type": "Point",
+#     "coordinates": [
+#         13.036693,
+#         77.608116
+#     ],
+#     "_id": "64db5c27cf1cef5441b6af2b"
+#     },
+#     "revenue": 0,
+#     "createdAt": "2023-08-15T11:06:15.670Z",
+#     "updatedAt": "2023-08-15T11:06:15.670Z",
+#     "__v": 0
+# }
+
+
+
+#####################################################################  NOTIFICATION  #####################################################################
+GET http://localhost:5000/trial HTTP/1.1
+
+###
+GET http://localhost:8000/6553036dac52c88a26d74058
+
+###
+GET http://localhost:4000/notification
+
+
+###
+POST http://localhost:8000/razorpay/initiate-transaction
+Content-Type: application/json
+
+{
+    "receipt": "das",
+    "amount": 123321 
+}
